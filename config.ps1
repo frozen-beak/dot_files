@@ -121,7 +121,7 @@ function set-light {
     )
     try {
         (Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1, $Level)
-        Write-Host "💡-> $Level%" -ForegroundColor Green
+        Write-Host "Brightness -> $Level%" -ForegroundColor Green
     }
     catch {
         Write-Host "[ERR] 500: $_" -ForegroundColor Red
